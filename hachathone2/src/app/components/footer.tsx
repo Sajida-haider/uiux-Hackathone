@@ -1,88 +1,56 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
-    <footer
-      style={{
-        width: "100%",
-        height: "auto",
-        margin: "0 auto",
-        padding: "20px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        backgroundColor: "", // background color
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          borderBottom: "1px solid #ccc",
-          paddingBottom: "20px",
-        }}
-      >
+    <footer className="bg-white py-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-600">
         {/* Address Section */}
-        <div style={{ flex: 1, paddingRight: "20px" }}>
-          <h4>Address</h4>
+        <div>
           <p>400 University Drive Suite 200 Coral Gables,</p>
           <p>FL 33134 USA</p>
         </div>
 
         {/* Links Section */}
-        <div style={{ flex: 1, paddingLeft: "20px" }}>
-          <h4>Links</h4>
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            <li style={{ marginBottom: "10px" }}>Home</li>
-            <li style={{ marginBottom: "10px" }}>Shop</li>
-            <li style={{ marginBottom: "10px" }}>About</li>
-            <li style={{ marginBottom: "10px" }}>Contact</li>
+        <div>
+          <h4 className="font-bold mb-2">Links</h4>
+          <ul>
+            <li>Home</li>
+            <li>Shop</li>
+            <li>About</li>
+            <li>Contact</li>
           </ul>
         </div>
 
         {/* Help Section */}
-        <div style={{ flex: 1, paddingLeft: "20px" }}>
-          <h4>Help</h4>
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            <li style={{ marginBottom: "10px" }}>Payment Options</li>
-            <li style={{ marginBottom: "10px" }}>Returns</li>
-            <li style={{ marginBottom: "10px" }}>Privacy Policies</li>
+        <div>
+          <h4 className="font-bold mb-2">Help</h4>
+          <ul>
+            <li>Payment Options</li>
+            <li>Returns</li>
+            <li>Privacy Policies</li>
           </ul>
         </div>
-
-        {/* Newsletter Section */}
-        <div style={{ flex: 1, paddingLeft: "20px" }}>
-          <h4>Newsletter</h4>
-          <form style={{ display: "flex", flexDirection: "column" }}>
-            <input
-              type="email"
-              placeholder="Enter Your Email Address"
-              style={{
-                marginBottom: "10px",
-                padding: "10px",
-                border: "1px solid #ccc",
-                borderRadius: "5px",
-              }}
-            />
-            <button
-              style={{
-                backgroundColor: "#000",
-                color: "#fff",
-                padding: "10px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-              }}
-            >
-              SUBSCRIBE
-            </button>
-          </form>
-        </div>
       </div>
-      <div style={{ textAlign: "center", marginTop: "20px" }}>
-        <p>2022 Meubel House. All rights reserved</p>
+      {/* Newsletter Section */}
+      <div className="text-center mt-4">
+        <h4 className="font-bold mb-2">Newsletter</h4>
+        <form className="flex justify-center items-center">
+          <input
+            type="email"
+            placeholder="Enter Your Email Address"
+            className="border border-gray-300 p-2 w-72"
+          />
+          <button type="submit" className="bg-black text-white px-4 py-2 ml-2">
+            SUBSCRIBE
+          </button>
+        </form>
+        <div className="mt-2 border-b-2 border-gray-400 w-72 mx-auto"></div>{" "}
+        {/* Underline */}
       </div>
 
+      <div className="text-center mt-8 text-sm text-gray-500">
+        © 2022 Mxubel House. All rights reserved.
+      </div>
     </footer>
   );
 };

@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Hero from "@/app/components/hero";
 import Sidetable from "@/app/components/sidetable";
 import Blog from "@/app/components/blog";

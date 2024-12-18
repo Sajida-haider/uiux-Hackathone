@@ -1,97 +1,86 @@
-import React from 'react';
+import Image from "next/image";
 
-const Blog = () => {
+const BlogSection = () => {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-semibold title-font mb-4 text-gray-900">
-            Our Blogs
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-          Find a bright ideal to suit your taste with our great selection
+    <section className="text-center py-10 px-4">
+      {/* Title Section */}
+      <h2 className="text-3xl font-bold mb-2">Our Blogs</h2>
+      <p className="text-gray-500 mb-8">
+        Find a bright ideal to suit your taste with our great selection.
+      </p>
+
+      {/* Blog Cards Container */}
+      <div className="flex flex-wrap justify-center gap-6">
+        {/* Blog Card 1 */}
+        <div className="w-[353px] h-[554px] bg-white shadow-md rounded-md overflow-hidden text-center">
+          <Image
+            src="/images/blog1.jpg"
+            alt="Blog 1"
+            width={353}
+            height={277} // Half of 554px
+            className="object-cover"
+          />
+          <h3 className="text-lg font-semibold my-4">
+            Going all-in with millennial design
+          </h3>
+          <p className="text-teal-500 font-bold cursor-pointer mb-4">
+            Read More
           </p>
-        </div>
-        <div className="flex flex-wrap -m-4">
-          {/* Image Card 1 */}
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex flex-col items-center">
-              <img
-                alt="blog image"
-                className="w-[393px] h-[400px] rounded-2xl object-cover"
-                src="/blog1.jpg"
-              />
-              <h1 className="tracking-widest text-xl title-font font-serif font-medium text-black mb-1 mt-4 py-4">
-                Going all-in with millennial design
-              </h1>
-             
-              <a href="#" className="border-b-2 text-xl border-black pb-2 py-8">
-                Read More
-              </a>
-              <div className="flex justify-center gap-4 mt-4">
-                  <span className="text-sm text-black">5 min</span>
-                  <span className="text-sm text-black">12th Oct 2022</span>
-                </div>
-            </div>
-          </div>
-
-          {/* Image Card 2 */}
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex flex-col items-center">
-              <img
-                alt="blog image"
-                className="w-[393px] h-[400px] rounded-2xl object-cover"
-                src="/blog2.jpg"
-              />
-              <h1 className="tracking-widest text-xl title-font font-serif font-medium text-black mb-1 mt-4 py-4">
-                Going all-in with millennial design
-              </h1>
-              
-              <a href="#" className="border-b-2 text-xl border-black pb-2 py-8">
-                Read More
-              </a>
-              <div className="flex justify-center text-xl gap-4 mt-4">
-                  <span className="text-sm text-black">5 min</span>
-                  <span className="text-sm text-black">12th Oct 2022</span>
-                </div>
-            </div>
-          </div>
-
-          {/* Image Card 3 */}
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex flex-col items-center">
-              <img
-                alt="blog image"
-                className="w-[393px] h-[400px] rounded-2xl object-cover"
-                src="/blog3.jpg"
-              />
-              <h1 className="tracking-widest text-xl title-font font-medium font-serif text-black mb-1 mt-4 py-4">
-                Going all-in with millennial design
-              </h1>
-              
-              
-              <a href="#" className="border-b-2 text-xl border-black pb-2 py-8">
-                Read More
-              </a>
-              <div className="flex justify-center gap-4 mt-4">
-                  <span className="text-sm text-black">5 min</span>
-                  <span className="text-sm text-black">12th Oct 2022</span>
-                </div>
-            </div>
+          <div className="flex justify-between px-6 text-gray-500 text-sm">
+            <span>5 min</span>
+            <span>12 Oct 2022</span>
           </div>
         </div>
 
-        {/* View All Posts Section */}
-        <div className="text-center mt-8 py-6">
-          <h2 className="text-2xl font-medium text-gray-900">
-            <a href="#" className="border-b-2 border-black pb-4 ">
-              View All Posts
-            </a>
-          </h2>
+        {/* Blog Card 2 */}
+        <div className="w-[353px] h-[554px] bg-white shadow-md rounded-md overflow-hidden text-center">
+          <Image
+            src="/images/blog2.jpg"
+            alt="Blog 2"
+            width={353}
+            height={277}
+            className="object-cover"
+          />
+          <h3 className="text-lg font-semibold my-4">
+            Going all-in with millennial design
+          </h3>
+          <p className="text-teal-500 font-bold cursor-pointer mb-4">
+            Read More
+          </p>
+          <div className="flex justify-between px-6 text-gray-500 text-sm">
+            <span>5 min</span>
+            <span>12 Oct 2022</span>
+          </div>
+        </div>
+
+        {/* Blog Card 3 */}
+        <div className="w-[353px] h-[554px] bg-white shadow-md rounded-md overflow-hidden text-center">
+          <Image
+            src="/images/blog3.jpg"
+            alt="Blog 3"
+            width={353}
+            height={277}
+            className="object-cover"
+          />
+          <h3 className="text-lg font-semibold my-4">
+            Going all-in with millennial design
+          </h3>
+          <p className="text-teal-500 font-bold cursor-pointer mb-4">
+            Read More
+          </p>
+          <div className="flex justify-between px-6 text-gray-500 text-sm">
+            <span>5 min</span>
+            <span>12 Oct 2022</span>
+          </div>
         </div>
       </div>
+
+      {/* View All Post */}
+      <p className="mt-6 text-teal-500 font-bold cursor-pointer">
+        View All Post
+      </p>
     </section>
   );
 };
 
-export default Blog;
+export default BlogSection;
